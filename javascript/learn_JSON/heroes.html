@@ -38,7 +38,7 @@
             header.appendChild(myH1);
 
             const myPara = document.createElement('p');
-            myPara.textContent = `Homwtown: ${obj['homeTown']} // Formed: ${['formed']}`;
+            myPara.textContent = `Homwtown: ${obj['homeTown']} // Formed: ${obj['formed']}`;
             header.appendChild(myPara);
 
         }
@@ -76,6 +76,8 @@
                 section.appendChild(myArticle);
             }
         }
+
+        populate();
     </script>
 </body>
 </html>
