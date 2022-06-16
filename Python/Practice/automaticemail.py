@@ -6,7 +6,7 @@ import smtplib
 def automatic_email():
     user = input("Enter Your Name >>:")
     email = input("Enter Your Email >>:")
-    message = (f"Daer {user}, Welcome to Thecleverprogrammer")
+    message = (f"Dear {user}, Welcome to Thecleverprogrammer")
     s = smtplib.SMTP('smtp.gmail.com', 587)
     s.starttls()
     s.login("Your Gmail Account", "Your App Password")
