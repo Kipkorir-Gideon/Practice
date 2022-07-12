@@ -18,6 +18,8 @@ let formValidation = () => {
     } else {
         console.log("success");
         msg.innerHTML = "";
+
+        acceptData();
     }
 };
 
