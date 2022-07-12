@@ -5,3 +5,8 @@ let textarea = document.getElementById("textarea");
 let msg = document.getElementById("msg");
 let tasks = document.getElementById("tasks");
 let add = document.getElementById("add");
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    formValidation();
+});
