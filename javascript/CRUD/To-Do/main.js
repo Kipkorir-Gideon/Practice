@@ -20,3 +20,17 @@ let formValidation = () => {
         msg.innerHTML = "";
     }
 };
+
+let data = [];
+
+let acceptData = () => {
+    data.push({
+        text: textInput.value,
+        date: dateInput.value,
+        description: textarea.value,
+    });
+
+    localStorage.setItem("data", JSON.stringify(data));
+
+    console.log(data);
+}
