@@ -43,7 +43,7 @@ let acceptData = () => {
     console.log(data);
 
     createTasks();
-}
+};
 
 let createTasks = () => {
     tasks.innerHTML = "";
@@ -61,6 +61,8 @@ let createTasks = () => {
         </div>
         `);
     });
+
+    resetForm();
 };
 
 let resetForm = () => {
