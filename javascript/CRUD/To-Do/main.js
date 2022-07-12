@@ -41,6 +41,8 @@ let acceptData = () => {
     localStorage.setItem("data", JSON.stringify(data));
 
     console.log(data);
+
+    createTasks();
 }
 
 let createTasks = () => {
@@ -59,4 +61,10 @@ let createTasks = () => {
         </div>
         `);
     });
+};
+
+let resetForm = () => {
+    textInput.value = "";
+    dateInput.value = "";
+    textarea.value = "";
 };
