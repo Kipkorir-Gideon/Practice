@@ -20,6 +20,12 @@ let formValidation = () => {
         msg.innerHTML = "";
 
         acceptData();
+        add.setAttribute("data-bs-dismiss", "modal");
+        add.click();
+
+        (() => {
+            add.setAttribute("data-bs-dismiss", "");
+        })();
     }
 };
 
