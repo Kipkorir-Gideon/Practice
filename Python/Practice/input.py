@@ -189,18 +189,21 @@
 
 
 
-print("Welcome to Treasure Island.\nYour mission is to find the treasure.")
-direction = input("Which direction are you taking? 'Left' or 'Right\n")
+# print("Welcome to Treasure Island.\nYour mission is to find the treasure.")
+# direction = input("Which direction are you taking? 'Left' or 'Right\n").lower()
 
-if direction == "Left":
-    swim_or_wait = input("Do you want to swim or wait? 'Swim' or 'Wait'\n")
-    if swim_or_wait == "Wait":
-        color = input("What color of the door do you want to open? 'Red' or 'Yellow' or 'Blue'\n")
-        if color == "Yellow":
-            print("You Win!")
-        else:
-            print("Game Over!")
-    elif swim_or_wait == "Swim":
-        print("Game Over!")
-elif direction == "Right":
-    print("Game Over!")
+# if direction == "left":
+#     swim_or_wait = input("Do you want to swim or wait? 'Swim' or 'Wait'\n").lower()
+#     if swim_or_wait == "wait":
+#         color = input("What color of the door do you want to open? 'Red' or 'Yellow' or 'Blue'\n").lower()
+#         if color == "yellow":
+#             print("You Win!")
+#         else:
+#             print("Game Over!")
+#     elif swim_or_wait == "swim":
+#         print("Game Over!")
+# elif direction == "right":
+#     print("Game Over!")
+
+
+
