@@ -207,3 +207,59 @@
 
 
 
+# import random
+
+# random_integer = random.randint(0, 100)
+
+# print(random_integer)
+
+# random_float = random.random()
+# print(random_float)
+
+
+# import random
+
+# test_seed = int(input("Create a seed number:\n"))
+# random.seed(test_seed)
+
+
+# toss = random.randint(0,1)
+
+# if toss==0:
+#     print("Heads")
+# else:
+#     print("Tails")
+
+
+
+# import random
+
+# namesAsCSV = input("Give me everybody's names, separated by a comma\n")
+# names = namesAsCSV.split(",")
+
+# print(names)
+
+# random_index = random.randint(0, len(names) - 1)
+# print(random_index)
+
+# random_name = names[random_index]
+
+# print(f"{random_name} is the one paying the bill.")
+
+
+
+row1 = ["","",""]
+row2 = ["","",""]
+row3 = ["","",""]
+
+map = [row1, row2, row3]
+print(f"{row1}\n{row2}\n{row3}")
+position  = input("Where do you want to put the treasure?\n")
+
+vertical = int(position[1])
+horizontal = int(position[0])
+
+selected_row = map[vertical -1]
+selected_row[horizontal -1] = "X"
+
+print(f"{row1}\n{row2}\n{row3}")
