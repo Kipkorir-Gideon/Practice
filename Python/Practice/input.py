@@ -371,3 +371,48 @@
 
 
 
+# def my_function():
+#     print("Hello")
+#     print("Bye") 
+
+# my_function()
+
+
+
+import random
+word_list = ["ardvark", "baboon", "camel"]
+
+
+chosen_word = random.choice(word_list)
+
+print(f"If I was you, I would choose {chosen_word}")
+
+end_of_game = False
+display = []
+
+for letter in chosen_word:
+        display.append("_")
+
+while not end_of_game:
+
+    guess = input("Guess a letter:\n").lower()
+    
+    
+    for letter in range(len(chosen_word)):
+        if chosen_word[letter] == guess:
+            display[letter] = guess
+            
+    print(display)
+
+    if "_" not in display:
+        end_of_game = True
+            
+
+print("You won!")
+
+
+# for letter in chosen_word:
+#     if letter == guess:
+#         print("RIght")
+#     else:
+#         print("Wrong") 
