@@ -380,10 +380,69 @@
 
 
 import random
+
+stages = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
+
 word_list = ["ardvark", "baboon", "camel"]
 
 
 chosen_word = random.choice(word_list)
+lives = 6
 
 print(f"If I was you, I would choose {chosen_word}")
 
@@ -396,7 +455,7 @@ for letter in chosen_word:
 while not end_of_game:
 
     guess = input("Guess a letter:\n").lower()
-    
+        
     
     for letter in range(len(chosen_word)):
         if chosen_word[letter] == guess:
@@ -404,15 +463,16 @@ while not end_of_game:
             
     print(display)
 
-    if "_" not in display:
+    if "_" not in display and lives >= 0:
         end_of_game = True
             
+        print("You won!")
+        
+    
+    if guess not in chosen_word:
+        lives -= 1
+    if lives == 0:
+        end_of_game = True
+        print("You lose!")
 
-print("You won!")
-
-
-# for letter in chosen_word:
-#     if letter == guess:
-#         print("RIght")
-#     else:
-#         print("Wrong") 
+    print(stages[lives])
